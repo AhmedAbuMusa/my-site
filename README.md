@@ -1,14 +1,33 @@
-# MyStore
-# Description: 
-My-store is a site for hosting your you can show your store products and allow customers to view and purchase them. Or even you can use it as a starting point and ammend it to provide more advanced features.
+\# MyStore
 
-# MyStore Structure
+\# Description: 
+
+My-store is a site where you can show your store products and allow customers to view and purchase them. Or even you can use it as a starting point and ammend it to provide more advanced features.
+
+
+
+\# MyStore Structure
+
 The portal structure consists of the following:
 
+
+
 **Product list** page, which displays the available products for the user to choose and add to their cart
+
+
+
 **Product details** page, which displays more information about any particular product
+
+
+
 **Shopping cart**, which includes the products that the user has added to their cart
+
+
+
 **Checkout form**, which collects information about the user 
+
+
+
 **Order confirmation page**, which shows the outcome after the user completes the checkout process 
 
 # Demo
