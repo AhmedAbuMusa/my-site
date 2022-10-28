@@ -4,7 +4,7 @@
 </a>
 <h2> {{product.name}}</h2>
 <h2> {{product.price}}</h2>
-<select class="select-input" [(ngModel)]="productItemsNo">
+<select #itemsNo="ngModel" pattern="^(1|[1-9][1-9]*)$" class="select-input" [(ngModel)]="productItemsNo">
     <option value="0">0</option>
     <option value="1">1</option>
     <option Value="2">2</option>
@@ -18,5 +18,5 @@
     <option Value="10">10</option>
 </select>
 <br>
-<button class="btn btn-primary" (click)="addToCart()" style="margin-right:2px;" >Add to cart</button>
+<button [disabled]="itemsNo.invalid" class="btn btn-primary" (click)="addToCart()" style="margin-right:2px;" >Add to cart</button>
 </div>

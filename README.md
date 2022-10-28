@@ -1,6 +1,16 @@
 # MyStore
 # Description: 
-For me, My-store is my first attempt in the angular workd :). For you, you can benefit from it in many different ways. For exampl you can use it as is to provide a site for hosting your store products. Or even you can use it as a starting point and ammend it to provide more advanced features.
+My-store is a site for hosting your you can show your store products and allow customers to view and purchase them. Or even you can use it as a starting point and ammend it to provide more advanced features.
+
+# MyStore Structure
+The portal structure consists of the following:
+
+**Product list** page, which displays the available products for the user to choose and add to their cart
+**Product details** page, which displays more information about any particular product
+**Shopping cart**, which includes the products that the user has added to their cart
+**Checkout form**, which collects information about the user 
+**Order confirmation page**, which shows the outcome after the user completes the checkout process 
+
 # Demo
 ![my-site](https://user-images.githubusercontent.com/77669781/198496654-5de92679-c482-48f4-a96a-f677628c907d.gif)
 
