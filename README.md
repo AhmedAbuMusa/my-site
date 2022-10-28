@@ -1,12 +1,12 @@
-\# MyStore
+# MyStore
 
-\# Description: 
+# Description: 
 
 My-store is a site where you can show your store products and allow customers to view and purchase them. Or even you can use it as a starting point and ammend it to provide more advanced features.
 
 
 
-\# MyStore Structure
+# MyStore Structure
 
 The portal structure consists of the following:
 
