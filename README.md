@@ -1,6 +1,6 @@
 # MyStore
 # Description: 
-For me, My-store is my first attempt in the angular workd :). For you, you can benefit from it in many different ways. For exampl you can use it as is to provide a site for hosting your store products. Or even you can start it as a starting point and ammend it to provide more advanced features.
+For me, My-store is my first attempt in the angular workd :). For you, you can benefit from it in many different ways. For exampl you can use it as is to provide a site for hosting your store products. Or even you can use it as a starting point and ammend it to provide more advanced features.
 # Demo
 ![my-site](https://user-images.githubusercontent.com/77669781/198496654-5de92679-c482-48f4-a96a-f677628c907d.gif)
 

@@ -1,13 +1,49 @@
 <div class="product-index" style="text-align:center; align-items:center">
-    <app-cart-item class="product-container"  *ngFor="let product of products" [product]="product" (recalculateEvent)="recalculate()" (removeCartItemEvent)="removeCartItem(product)" ></app-cart-item>
+    <app-cart-item class="product-container" *ngFor="let product of products" [product]="product"
+        (recalculateEvent)="recalculate()" (removeCartItemEvent)="removeCartItem(product)"></app-cart-item>
     Total: <input type="text" value="{{total}}" disabled>
 </div>
 <div class="product-index" style="text-align:center; align-items:center">
     <form name="myForm" #myform="ngForm" (ngSubmit)="submitForm()">
-        Full name <br><input name="userName"  type="text" minlength="3" required [(ngModel)]="userName" placeholder="(minimum 3 characters)"> <br>
-        Address <br><input name="Address" type="text" [(ngModel)]="Address" placeholder="(minimum 6 characters)" minlength="6" required> <br>
-        Credit card number <br><input name="creaditCard" type="string" minlength="16" [(ngModel)]="cardNo" maxlength="16"  required placeholder="(16-digit number)"> <br><br>
+        Full name <br><input name="userName" #userNameVal="ngModel" type="text" minlength="3" required [(ngModel)]="userName"
+            placeholder="(minimum 3 characters)"> <br>
+        Address <br><input name="address" #AddressVal="ngModel" type="text" [(ngModel)]="Address" placeholder="(minimum 6 characters)"
+            minlength="6" required> <br>
+        Credit card number <br><input name="creaditCardNo" #creaditCard="ngModel" type="string" pattern="^(0|[1-9][0-9]*)$"  minlength="16" [(ngModel)]="cardNo"
+            maxlength="16" [maxlength]="16" required placeholder="(16-digit number)"> <br><br>
         We'll never share your payment details with anyon else <br><br>
-        <button type="submit" class="btn btn-primary" [disabled]="myform.invalid" (click)="submitForm()" style="margin-right:2px;" >Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="myform.invalid" (click)="submitForm()"
+            style="margin-right:2px;">Submit</button>
     </form>
+    <div style="color:red" *ngIf="userNameVal.invalid && userNameVal.dirty">
+        <div *ngIf="userNameVal.errors?.['required']">
+          Please provide a user name.
+        </div>
+        <div *ngIf="userNameVal.errors?.['minlength']">
+          user name has to be at least 3 letters.
+        </div>
+      </div>
+
+      <div style="color:red" *ngIf="AddressVal.invalid && AddressVal.dirty">
+        <div *ngIf="AddressVal.errors?.['required']">
+          Please provide an address.
+        </div>
+        <div *ngIf="AddressVal.errors?.['minlength']">
+          Address has to be at least 6 letters.
+        </div>
+      </div>
+      <div style="color:red" *ngIf="creaditCard.invalid && creaditCard.dirty">
+        <div *ngIf="creaditCard.errors?.['required']">
+          Please provide an credt card number.
+        </div>
+        <div *ngIf="creaditCard.errors?.['minlength']">
+            credt card number has to be at least 16 letters.
+        </div>
+        <div *ngIf="creaditCard.errors?.['maxlength']">
+            credt card number has to be at most 16 letters.
+        </div>
+        <div *ngIf="creaditCard.errors?.['pattern']">
+            credt card number has to have numbers only.
+        </div>
+      </div>
 </div>
