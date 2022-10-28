@@ -1,0 +1,9 @@
+<div clas="product-container">
+    <a routerLink="/productDetails/{{product.id}}">
+        <img class="product-image" src="{{product.url}}">
+    </a>
+    <h2> {{product.name}}</h2>
+    <h2> {{product.price}}</h2>
+    <input type="number" min="1" max="10" (ngModelChange)="recalculate()" [(ngModel)]="product.ItemsNo"><br><br>
+    <input type="button" value="Remove from cart" (click)="removeCartItem()"><br><br>
+</div>

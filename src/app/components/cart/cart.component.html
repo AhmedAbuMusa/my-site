@@ -1,0 +1,13 @@
+<div class="product-index" style="text-align:center; align-items:center">
+    <app-cart-item class="product-container"  *ngFor="let product of products" [product]="product" (recalculateEvent)="recalculate()" (removeCartItemEvent)="removeCartItem(product)" ></app-cart-item>
+    Total: <input type="text" value="{{total}}" disabled>
+</div>
+<div class="product-index" style="text-align:center; align-items:center">
+    <form name="myForm" #myform="ngForm" (ngSubmit)="submitForm()">
+        Full name <br><input name="userName"  type="text" minlength="3" required [(ngModel)]="userName" placeholder="(minimum 3 characters)"> <br>
+        Address <br><input name="Address" type="text" [(ngModel)]="Address" placeholder="(minimum 6 characters)" minlength="6" required> <br>
+        Credit card number <br><input name="creaditCard" type="string" minlength="16" [(ngModel)]="cardNo" maxlength="16"  required placeholder="(16-digit number)"> <br><br>
+        We'll never share your payment details with anyon else <br><br>
+        <button type="submit" class="btn btn-primary" [disabled]="myform.invalid" (click)="submitForm()" style="margin-right:2px;" >Submit</button>
+    </form>
+</div>

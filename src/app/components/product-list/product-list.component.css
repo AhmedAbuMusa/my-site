@@ -1,0 +1,13 @@
+.product-index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1024px;
+    margin-bottom: 64px;
+    margin-left: 20%;margin-right: 20%;
+  }
+  
+  .product-container {
+    display: flex;
+    justify-content: center;
+  }

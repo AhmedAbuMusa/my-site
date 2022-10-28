@@ -1,0 +1,26 @@
+<div clas="detail-container" style="text-align: center">
+
+    <div>
+        <img class="product-image" src="{{product.url}}">
+    </div>
+
+    <h2> {{product.name}}</h2>
+    <h2> {{product.description}}</h2>
+    <h2> {{product.price}}</h2>
+    <select class="select-input" [(ngModel)] = "product.ItemsNo">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option Value="2">2</option>
+        <option value="3">3</option>
+        <option Value="4">4</option>
+        <option Value="5">5</option>
+        <option value="6">6</option>
+        <option Value="7">7</option>
+        <option value="8">8</option>
+        <option Value="9">9</option>
+        <option Value="10">10</option>
+    </select>
+    <br>
+    <button class="btn btn-primary"  (click)="addToCart()"  style="margin-right:2px;">Add to cart</button><br><br>
+    <a routerLink="" class="back-link">Back to product list</a>
+</div>
